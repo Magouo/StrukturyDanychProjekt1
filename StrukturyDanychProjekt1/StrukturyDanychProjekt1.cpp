@@ -25,6 +25,7 @@ int main()
         int wybor1 = 0;
         int miejsce = 0;
         int liczba = 0;
+        bool wyjdz2 = false;
         cout << "Ktora strukture chcesz uzyc? " << endl;
         cout << "1. tablica dynamiczna" << endl;
         cout << "2. lista jednokierunkowa z head" << endl;
@@ -33,126 +34,140 @@ int main()
         cin >> wybor;
         switch(wybor) {
         case 1:
-            cout << " Co chcesz zrobic?" << endl;
-            cout << "1 Usunac na poczatku" << endl;
-            cout << "2 Usunac na koncu" << endl;
-            cout << "3 Usunac losowy element" << endl;
-            cout << "4 Dodac na poczatku element" << endl;
-            cout << "5 Dodac na koncu element" << endl;
-            cout << "6 Dodac losowy element" << endl;
-            cout << "7 Wyszukac wartosc" << endl;
-            cin >> wybor1;
-            switch (wybor1) {
-            case 1:
-                struktura3.usunWartoscNaPoczatku();
-                break;
-            case 2:
-                struktura3.usunWartoscNaKoncu();
-                break;
-            case 3:
-                cin >> liczba;
-                struktura3.usunWartoscNaMiejscu(liczba);
-                break;
-            case 4: 
-                cin >> liczba;
-                struktura3.dodajNaPoczatek(liczba);
-                break;
-            case 5:
-                cin >> liczba;
-                struktura3.dodajNaKoniec(liczba);
-                break;
-            case 6:
-                cin >> liczba;
-                cin >> miejsce;
-                struktura3.dodajNaMiejsce(miejsce, liczba);
-                break;
-            case 7:
-                cin >> liczba;
-                struktura3.znajdzWartosc(liczba);
-                break;
-            case 8:
-
+            while (wyjdz2 == false)
+            {
+                cout << " Co chcesz zrobic?" << endl;
+                cout << "1 Usunac na poczatku" << endl;
+                cout << "2 Usunac na koncu" << endl;
+                cout << "3 Usunac losowy element" << endl;
+                cout << "4 Dodac na poczatku element" << endl;
+                cout << "5 Dodac na koncu element" << endl;
+                cout << "6 Dodac losowy element" << endl;
+                cout << "7 Wyszukac wartosc" << endl;
+                cin >> wybor1;
+                switch (wybor1) {
+                case 1:
+                    struktura3.usunWartoscNaPoczatku();
+                    break;
+                case 2:
+                    struktura3.usunWartoscNaKoncu();
+                    break;
+                case 3:
+                    cin >> liczba;
+                    struktura3.usunWartoscNaMiejscu(liczba);
+                    break;
+                case 4:
+                    cin >> liczba;
+                    struktura3.dodajNaPoczatek(liczba);
+                    break;
+                case 5:
+                    cin >> liczba;
+                    struktura3.dodajNaKoniec(liczba);
+                    break;
+                case 6:
+                    cin >> liczba;
+                    cin >> miejsce;
+                    struktura3.dodajNaMiejsce(miejsce, liczba);
+                    break;
+                case 7:
+                    cin >> liczba;
+                    struktura3.znajdzWartosc(liczba);
+                    break;
+                case 8:
+                    wyjdz2 = true;
+                }
             }
         case 2:
-            cout << " Co chcesz zrobic?" << endl;
-            cout << "1 Usunac na poczatku" << endl;
-            cout << "2 Usunac na koncu" << endl;
-            cout << "3 Usunac losowy element" << endl;
-            cout << "4 Dodac na poczatku element" << endl;
-            cout << "5 Dodac na koncu element" << endl;
-            cout << "6 Dodac losowy element" << endl;
-            cout << "7 Wyszukac wartosc" << endl;
-            cin >> wybor1;
-            switch (wybor1) {
-            case 1:
-                struktura2.usunWartoscNaPoczatku();
-                break;
-            case 2:
-                struktura2.usunWartoscNaKoncu();
-                break;
-            case 3:
-                cin >> liczba;
-                struktura2.usunWartoscNaMiejscu(liczba);
-                break;
-            case 4:
-                cin >> liczba;
-                struktura2.dodajNaPoczatek(liczba);
-                break;
-            case 5:
-                cin >> liczba;
-                struktura2.dodajNaKoniec(liczba);
-                break;
-            case 6:
-                cin >> liczba;
-                cin >> miejsce;
-                struktura2.dodajNaMiejsce(miejsce, liczba);
-                break;
-            case 7:
-                cin >> liczba;
-                struktura2.znajdzWartosc(liczba);
-                break;
-            }
+            while (wyjdz == false)
+            {
+                cout << " Co chcesz zrobic?" << endl;
+                cout << "1 Usunac na poczatku" << endl;
+                cout << "2 Usunac na koncu" << endl;
+                cout << "3 Usunac losowy element" << endl;
+                cout << "4 Dodac na poczatku element" << endl;
+                cout << "5 Dodac na koncu element" << endl;
+                cout << "6 Dodac losowy element" << endl;
+                cout << "7 Wyszukac wartosc" << endl;
+                cin >> wybor1;
+                switch (wybor1) {
+                case 1:
+                    struktura2.usunWartoscNaPoczatku();
+                    break;
+                case 2:
+                    struktura2.usunWartoscNaKoncu();
+                    break;
+                case 3:
+                    cin >> liczba;
+                    struktura2.usunWartoscNaMiejscu(liczba);
+                    break;
+                case 4:
+                    cin >> liczba;
+                    struktura2.dodajNaPoczatek(liczba);
+                    break;
+                case 5:
+                    cin >> liczba;
+                    struktura2.dodajNaKoniec(liczba);
+                    break;
+                case 6:
+                    cin >> liczba;
+                    cin >> miejsce;
+                    struktura2.dodajNaMiejsce(miejsce, liczba);
+                    break;
+                case 7:
+                    cin >> liczba;
+                    struktura2.znajdzWartosc(liczba);
+                    break;
+                }
+        case 8:
+            wyjdz2 = true;
             break;
+            }
         case 3:
-            cout << " Co chcesz zrobic?" << endl;
-            cout << "1 Usunac na poczatku" << endl;
-            cout << "2 Usunac na koncu" << endl;
-            cout << "3 Usunac losowy element" << endl;
-            cout << "4 Dodac na poczatku element" << endl;
-            cout << "5 Dodac na koncu element" << endl;
-            cout << "6 Dodac losowy element" << endl;
-            cout << "7 Wyszukac wartosc" << endl;
-            cin >> wybor1;
-            switch (wybor1) {
-            case 1:
-                struktura1.usunWartoscNaPoczatku();
-                break;
-            case 2:
-                struktura1.usunWartoscNaKoncu();
-                break;
-            case 3:
-                cin >> liczba;
-                struktura1.usunWartoscNaMiejscu(liczba);
-                break;
-            case 4:
-                cin >> liczba;
-                struktura1.dodajNaPoczatek(liczba);
-                break;
-            case 5:
-                cin >> liczba;
-                struktura1.dodajNaKoniec(liczba);
-                break;
-            case 6:
-                cin >> liczba;
-                cin >> miejsce;
-                struktura1.dodajNaMiejsce(miejsce, liczba);
-                break;
-            case 7:
-                cin >> liczba;
-                struktura1.znajdzWartosc(liczba);
-                break;
+            while (wyjdz2 == false)
+            {
+                cout << " Co chcesz zrobic?" << endl;
+                cout << "1 Usunac na poczatku" << endl;
+                cout << "2 Usunac na koncu" << endl;
+                cout << "3 Usunac losowy element" << endl;
+                cout << "4 Dodac na poczatku element" << endl;
+                cout << "5 Dodac na koncu element" << endl;
+                cout << "6 Dodac losowy element" << endl;
+                cout << "7 Wyszukac wartosc" << endl;
+                cin >> wybor1;
+                switch (wybor1) {
+                case 1:
+                    struktura1.usunWartoscNaPoczatku();
+                    break;
+                case 2:
+                    struktura1.usunWartoscNaKoncu();
+                    break;
+                case 3:
+                    cin >> liczba;
+                    struktura1.usunWartoscNaMiejscu(liczba);
+                    break;
+                case 4:
+                    cin >> liczba;
+                    struktura1.dodajNaPoczatek(liczba);
+                    break;
+                case 5:
+                    cin >> liczba;
+                    struktura1.dodajNaKoniec(liczba);
+                    break;
+                case 6:
+                    cin >> liczba;
+                    cin >> miejsce;
+                    struktura1.dodajNaMiejsce(miejsce, liczba);
+                    break;
+                case 7:
+                    cin >> liczba;
+                    struktura1.znajdzWartosc(liczba);
+                    break;
+
+                case 8:
+                    wyjdz2 = true;
+                    break;
+                }
             }
-            break;
         case 4:
             wyjdz = true;
         }
